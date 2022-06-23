@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-center">
+        <form action="#" method="">
+          <input
+            type="number"
+            id="userInput"
+            class="w-50 mb-3"
+            placeholder="Input number here"
+          />
+          <br />
+          <button onclick="computeforInches()">Convert Inches</button>
+          <button onclick="computeforMeters()">Convert Meters</button>
+          <button onclick="computeforCentimeters()">Convert Centimeters</button>
+          <button onclick="computeforMillimeters()">Convert Millimeters</button>
+
+          <br />
+          <h1 id="inInches"></h1>
+          <h1 id="inMeters"></h1>
+          <h1 id="inCentimeters"></h1>
+          <h1 id="inMillimeters"></h1>
+        </form>
+      </div>
+    </div>
+    <script>
+      function computeforInches() {
+        let x = document.getElementById("userInput").value;
+        const inchToMeter = 0.0254;
+        const inchToCent = 2.54;
+        const inchToMm = 25.4;
+
+        let forMeter = inchToMeter * parseFloat(x);
+        let forCent = inchToCent * parseFloat(x);
+        let forMm = inchToMm * parseFloat(x);
+
+        document.getElementById("inInches").innerHTML =
+          x + " Inch(es) is equivalent to " + x + " Inch(es)";
+        document.getElementById("inMeters").innerHTML =
+          x + " Inch(es) is equivalent to " + forMeter + " Meter(s)";
+        document.getElementById("inCentimeters").innerHTML =
+          x + " Inch(es) is equivalent to " + forCent + " Centimeter(s)";
+        document.getElementById("inMillimeters").innerHTML =
+          x + " Inch(es) is equivalent to " + forMm + " Millimeters(s)";
+      }
+      function computeforMeters() {
+        let x = document.getElementById("userInput").value;
+        const meterToInch = 39.3701;
+        const meterToCentimeter = 100;
+        const meterToMillimeter = 1000;
+
+        let forInch = meterToInch * parseFloat(x);
+        let forCent = meterToCentimeter * parseFloat(x);
+        let forMm = meterToMillimeter * parseFloat(x);
+
+        document.getElementById("inInches").innerHTML =
+          x + " Meter(s) is equivalent to " + forInch + " Inch(es)";
+        document.getElementById("inMeters").innerHTML =
+          x + " Meter(s) is equivalent to " + x + " Meter(s)";
+        document.getElementById("inCentimeters").innerHTML =
+          x + " Meter(s) is equivalent to " + forCent + " Centimeter(s)";
+        document.getElementById("inMillimeters").innerHTML =
+          x + " Meter(s) is equivalent to " + forMm + " Millimeters(s)";
+      }
+      function computeforCentimeters() {
+        let x = document.getElementById("userInput").value;
+        const centToInch = 0.393701;
+        const centToMeter = 0.01;
+        const centToMillimeter = 10;
+
+        let forInch = centToInch * parseFloat(x);
+        let forMeter = centToMeter * parseFloat(x);
+        let forMm = centToMillimeter * parseFloat(x);
+
+        document.getElementById("inInches").innerHTML =
+          x + " Centimeters(s) is equivalent to " + forInch + " Inch(es)";
+        document.getElementById("inMeters").innerHTML =
+          x + " Centimeters(s) is equivalent to " + forMeter + " Meter(s)";
+        document.getElementById("inCentimeters").innerHTML =
+          x + " Centimeters(s) is equivalent to " + x + " Centimeter(s)";
+        document.getElementById("inMillimeters").innerHTML =
+          x + " Centimeters(s) is equivalent to " + forMm + " Millimeters(s)";
+      }
+      function computeforMillimeters() {
+        let x = document.getElementById("userInput").value;
+        const mmToInch = 0.0393701;
+        const mmToMeter = 0.001;
+        const mmToCentimeter = 0.1;
+
+        let forInch = mmToInch * parseFloat(x);
+        let forMeter = mmToMeter * parseFloat(x);
+        let forCent = mmToCentimeter * parseFloat(x);
+
+        document.getElementById("inInches").innerHTML =
+          x + " Millimeter(s) is equivalent to " + forInch + " Inch(es)";
+        document.getElementById("inMeters").innerHTML =
+          x + " Millimeter(s) is equivalent to " + forMeter + " Meter(s)";
+        document.getElementById("inCentimeters").innerHTML =
+          x + " Millimeter(s) is equivalent to " + forCent + " Centimeter(s)";
+        document.getElementById("inMillimeters").innerHTML =
+          x + " Millimeter(s) is equivalent to " + x + " Millimeters(s)";
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
